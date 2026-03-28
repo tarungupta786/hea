@@ -246,4 +246,9 @@ hea-project/
 - Add more training data to improve ML accuracy
 - Add SMS alerts via Twilio API
 - Build a mobile app using the existing REST API
-# The_Working_Version
+
+Authors :
+- Aditya sharma
+- Rohit Kuamr 
+- Sameer Shamsi 
+- Tarun Gupta
