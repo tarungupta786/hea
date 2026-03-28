@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "None",
+    "outDir": "./frontend/js",
+    "rootDir": "./frontend/ts",
+    "strict": false,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "lib": ["ES6", "DOM"],
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["frontend/ts/**/*"]
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEA — Register Hospital</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .upload-group {
+      margin-top: 10px;
+      padding: 16px;
+      border: 1px dashed var(--blue-mid);
+      border-radius: var(--radius);
+      background: var(--blue-light);
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .upload-group:hover { background: rgba(59, 130, 246, 0.15); }
+    .step-indicator {
+      display: flex; gap: 10px; justify-content: space-between; margin-bottom: 24px;
+    }
+    .step {
+      flex: 1; text-align: center; padding: 4px; border-bottom: 4px solid var(--border);
+      color: var(--gray-500); font-size: 11px; font-weight: 600; text-transform: uppercase;
+    }
+    .step.active { border-color: var(--blue-mid); color: var(--blue-mid); }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-logo">
+    HEA
+    <span>Hospital Emergency Allocation</span>
+  </div>
+  <nav class="header-nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="beds.html">Beds</a>
+    <a href="forecast.html">Forecast</a>
+    <a href="reports.html">Reports</a>
+    <a href="register-hospital.html" class="active">Register Hospital</a>
+  </nav>
+</header>
+
+<main class="main fade-in">
+  <div class="page-title">Register Hospital</div>
+  
+  <div class="card" style="max-width: 800px; margin: 0 auto;">
+    <div class="step-indicator">
+      <div class="step active">1. Details</div>
+      <div class="step">2. Capacity</div>
+      <div class="step">3. Documents</div>
+    </div>
+
+    <!-- UI ONLY: Multi-step form visual representation -->
+    <div class="form-row">
+      <div class="form-group float-label">
+        <input type="text" id="h-name" placeholder=" ">
+        <label for="h-name">Hospital Name</label>
+      </div>
+      <div class="form-group float-label">
+        <input type="text" id="h-loc" placeholder=" ">
+        <label for="h-loc">Location / Address</label>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group float-label">
+        <input type="number" id="h-beds" placeholder=" ">
+        <label for="h-beds">Total Bed Capacity</label>
+      </div>
+      <div class="form-group float-label">
+        <input type="number" id="h-icu" placeholder=" ">
+        <label for="h-icu">ICU Availability</label>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group float-label">
+        <input type="text" id="h-contact" placeholder=" ">
+        <label for="h-contact">Admin Contact (Phone/Email)</label>
+      </div>
+    </div>
+
+    <div class="section-divider"><h2>Document Uploads</h2></div>
+    
+    <div class="grid-2" style="gap: 12px;">
+      <div class="upload-group">
+        <div style="font-size: 20px; margin-bottom: 4px;">⚖️</div>
+        <strong>Legal Documents</strong>
+        <p style="font-size: 11px; color: var(--gray-500);">Registration, License</p>
+      </div>
+      <div class="upload-group">
+        <div style="font-size: 20px; margin-bottom: 4px;">🦺</div>
+        <strong>Safety Documents</strong>
+        <p style="font-size: 11px; color: var(--gray-500);">Fire, Building Clearance</p>
+      </div>
+      <div class="upload-group">
+        <div style="font-size: 20px; margin-bottom: 4px;">🩺</div>
+        <strong>Medical Documents</strong>
+        <p style="font-size: 11px; color: var(--gray-500);">Staff Credentials</p>
+      </div>
+      <div class="upload-group">
+        <div style="font-size: 20px; margin-bottom: 4px;">♻️</div>
+        <strong>Compliance</strong>
+        <p style="font-size: 11px; color: var(--gray-500);">Waste Management</p>
+      </div>
+    </div>
+
+    <div class="alert alert-info" style="margin-top: 24px; text-align: center; border-color: var(--blue-mid); background: var(--blue-light); color: var(--blue-mid);">
+      ℹ️ Documents will be verified after backend integration.
+    </div>
+
+    <div style="display: flex; justify-content: space-between; margin-top: 32px;">
+      <button class="btn btn-outline" onclick="alert('UI Demo Only')">Back</button>
+      <button class="btn btn-primary" onclick="alert('UI Demo Only')">Complete Registration</button>
+    </div>
+  </div>
+</main>
+
+<div id="floating-chat">
+  <div class="chat-btn" onclick="document.getElementById('chatWrap').classList.toggle('open')">💬</div>
+  <div class="chat-window" id="chatWrap">
+    <div class="chat-header">
+      <span>AI Assistant</span>
+      <span style="cursor: pointer;" onclick="document.getElementById('chatWrap').classList.remove('open')">✖</span>
+    </div>
+    <div class="chat-body">
+      <div style="background: var(--blue-light); color: var(--blue-mid); padding: 10px; border-radius: 8px; margin-bottom: 10px; width: fit-content;">
+        Hello! I'm the HEA Assistant. How can I help you today?
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" placeholder="Type a message...">
+      <button class="btn btn-primary btn-sm" onclick="alert('Chat logic will be implemented later.')">Send</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

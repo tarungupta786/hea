@@ -1,0 +1,10 @@
+{
+  "name": "hea-project-frontend",
+  "version": "1.0.0",
+  "description": "Hospital Emergency Allocation System Frontend",
+  "scripts": {
+    "dev": "cd frontend/auracare && npm run dev",
+    "build": "cd frontend/auracare && npm run build",
+    "install:frontend": "cd frontend/auracare && npm install"
+  }
+}
